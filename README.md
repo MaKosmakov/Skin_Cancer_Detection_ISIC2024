@@ -12,14 +12,15 @@ The goal of this project is to develop image-based algorithms to identify histol
 
 - underserved populations lacking specialized dermatologic care
 - dermatologists and primary care clinicians  
-
+- initiatives such as [SunSmart](https://www.sunsmart.com.au/), aiding in public awareness and education
+  
 ## KPIs
 
 - 
 - 
 
 ### Data Overview
-- [ ] 
+- We used the [SLICE-3D dataset](https://challenge2024.isic-archive.com/) available on the Kaggle competition. The image dataset contains every lesion from a subset of thousands of patients seen between the years 2015 and 2024 across nine institutions and three continents...
 
 ### Meta Data
 - [ ] EDA of Meta Data
