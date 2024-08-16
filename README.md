@@ -14,12 +14,15 @@ The goal of this project is to develop image-based algorithms to identify histol
 - dermatologists and primary care clinicians  
 - initiatives such as [SunSmart](https://www.sunsmart.com.au/), aiding in public awareness and education
   
-## KPIs
+## Key Performance Indicators (KPIs)
 
-- 
-- 
 
-### Data Overview
+Our primary KPI for this project is the Partial Area Under the ROC Curve (pAUC) above 80% True Positive Rate (TPR). This metric evaluates the performance of the binary classification algorithm with a focus on clinical relevance and high sensitivity.
+
+- pAUC above 80% TPR: The primary scoring metric for submissions. It measures the area under the ROC curve, but only for the portion where the TPR is above 80%. This ensures that the classifier maintains a high sensitivity, which is crucial for early cancer detection. Scores range from 0.0 to 0.2, reflecting the classifier’s ability to correctly identify malignant cases while minimizing false negatives.
+
+
+## Data Overview
 - We used the [SLICE-3D dataset](https://challenge2024.isic-archive.com/) available on the Kaggle competition. The image dataset contains every lesion from a subset of thousands of patients seen between the years 2015 and 2024 across nine institutions and three continents...
 
 ### Meta Data
