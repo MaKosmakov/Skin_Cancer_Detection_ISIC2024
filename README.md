@@ -31,10 +31,13 @@ Our primary KPI for this project is the Partial Area Under the ROC Curve (pAUC) 
   - Missing Values: 3k  for age, 12k for sex, and 6k for anatomical site general. We imputed NAN values with the mode of the respective feature.
   - Multiple columns describing various attributes of the total body photo (tbp) images (e.g., eccentricity of lesion, anatomical location, perimeter of lesion, etc.) These      are significantly correlated.
 
-  - 
-
 ### 3D Images
-  - 
+  - Images are in jpeg; vary in size, with a broad range of dimensions,  top 5: 133x133 - ~21k, 131x131 - ~21k, 129x129 - ~20k, 135x135 - ~20k, 137x137 - ~19k.
+  - Here are some examples of images which were diagnosed benign and malignant respectively.
+
+    
+
+    
 
  
 
