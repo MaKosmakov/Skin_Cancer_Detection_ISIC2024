@@ -26,9 +26,11 @@ Our primary KPI for this project is the Partial Area Under the ROC Curve (pAUC) 
 - We used the [SLICE-3D dataset](https://challenge2024.isic-archive.com/) available on the Kaggle competition. The image dataset contains every lesion from a subset of thousands of patients seen between the years 2015 and 2024 across nine institutions and three continents. The dataset consists of diagnostically labelled images with additional metadata in .csv file. These associated .csv file contains a binary diagnostic label (target), potential input variables (e.g. age_approx, sex, anatom_site_general, etc.)
 
 ### Meta Data (csv) and Exploratory Data Analysis (EDA)
-  - 401059 Rows, 55 columns          
+  - 401059 Rows, 55 columns
+  - Feature Types:  Includes both categorical and continuous variables.         
   - Missing Values: 3k  for age, 12k for sex, and 6k for anatomical site general. We imputed NAN values with the mode of the respective feature.
-  - Feature Types:  Includes both categorical and continuous variables.
+  - Multiple columns describing various attributes of the total body photo (tbp) images (e.g., eccentricity of lesion, anatomical location, perimeter of lesion, etc.) These      are significantly correlated.
+
   - 
 
 ### 3D Images
