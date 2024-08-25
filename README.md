@@ -3,7 +3,7 @@ Identify cancers among skin lesions from 3D photographs and metadata (Erdos Inst
 
 ### Team Members
 
-Madelyn Esther Cruz, Maksim Kosmakov, Sarasij Maitra, Ravi Prakash Tripathi, Jinjin Zhang
+Madelyn Esther Cruz, Maksim Kosmakov, Sarasij Maitra, Jinjin Zhang
 
 ### Overview
 The goal of this project is to develop image-based algorithms to identify histologically confirmed skin cancer cases with single-lesion crops from 3D total body photos (TBP).  This project is inspired by the [ISIC2024_Skin_Cancer_Detection Kaggle Competition](https://www.kaggle.com/competitions/isic-2024-challenge). Skin cancer can be fatal if not diagnosed early. Dermoscopy-based AI algorithms should help clinicians in diagnosing melanoma, basal cell, and squamous cell carcinoma by aiding early diagnosis and disease prognosis. Also, determining which individuals should see a clinician in the first place is impactful. We make a combined dataset consisting of both tabular data and image data and train it using tabular modelling and various image recognition architectures.
@@ -35,14 +35,21 @@ Our primary KPI for this project is the Partial Area Under the ROC Curve (pAUC) 
   - Images are in jpeg; vary in size, with a broad range of dimensions,  top 5: 133x133 - ~21k, 131x131 - ~21k, 129x129 - ~20k, 135x135 - ~20k, 137x137 - ~19k.
   - Here are some examples of images which were diagnosed benign and malignant respectively.
 
-    
+## Models and Best pAUC
+  - ImageTab (CNN with Optimizer) - 0.133
+  - ResNet50 (finetuned https://huggingface.co/microsoft/resnet-50) - 0.126
+  - Ensemble ResNet50 + EffNet (finetuned https://www.kaggle.com/code/nadhirhasan/tabular-based-pytorch-ann) - 0.126
 
-    
+## Conclusion
+ - The FastAI ImageTab model delivered the best performance. 
+ - Using an ensemble approach that combined the metadata model and the image model did not improve the results compared to using the image model alone.
+ - Challenges: High RAM usage for DataLoader (slow training and requires lots of memory), Possible overfitting
+ - Advantages of our work: We explored multiple approaches and leveraged various pretrained models, which saved time and yielded good results.
 
- 
-
-### Others 
-- [ ] Involve Markos* to ask what type of model we may use
+## Future work
+  - We plan to explore other ensemble models and techniques to improve image quality, such as hair removal. 
+  - Why does more training lead to a lower score, despite overfitting penalties? 
+  - Find more efficient ways to overcome the RAM requirements in the pytorch code.
 
 ### Sources
 
