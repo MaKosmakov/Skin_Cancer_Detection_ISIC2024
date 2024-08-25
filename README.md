@@ -35,6 +35,21 @@ Our primary KPI for this project is the Partial Area Under the ROC Curve (pAUC) 
   - Images are in jpeg; vary in size, with a broad range of dimensions,  top 5: 133x133 - ~21k, 131x131 - ~21k, 129x129 - ~20k, 135x135 - ~20k, 137x137 - ~19k.
   - Here are some examples of images which were diagnosed benign and malignant respectively.
 
+## Codes
+
+### EDA:
+- EDA (Random Forest).ipynb
+- EDA_updated.ipynb
+- ISIC.ipynb
+
+### Training Codes:
+- Image+MetaCombined.ipynb
+- ISIC_MC_Deep Learning_Images.ipynb
+- fastai-image-4.ipynb
+
+### Testing Codes:
+- ISIC_inference.ipynb
+  
 ## Models and Best pAUC
   - ImageTab (CNN with Optimizer) - 0.133
   - ResNet50 (finetuned https://huggingface.co/microsoft/resnet-50) - 0.126
