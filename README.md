@@ -7,6 +7,7 @@ Madelyn Esther Cruz, Maksim Kosmakov, Sarasij Maitra, Jinjin Zhang
 
 ### Overview
 The goal of this project is to develop image-based algorithms to identify histologically confirmed skin cancer cases with single-lesion crops from 3D total body photos (TBP).  This project is inspired by the [ISIC2024_Skin_Cancer_Detection Kaggle Competition](https://www.kaggle.com/competitions/isic-2024-challenge). Skin cancer can be fatal if not diagnosed early. Dermoscopy-based AI algorithms should help clinicians in diagnosing melanoma, basal cell, and squamous cell carcinoma by aiding early diagnosis and disease prognosis. Also, determining which individuals should see a clinician in the first place is impactful. We make a combined dataset consisting of both tabular data and image data and train it using tabular modelling and various image recognition architectures.
+<img width="601" alt="Screenshot 2024-08-20 at 20 47 09" src="https://github.com/user-attachments/assets/e6e31de4-4d49-4bda-88f2-226d30ccf2d8">
 
 ## Stakeholders
 
