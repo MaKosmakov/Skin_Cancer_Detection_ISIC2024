@@ -111,6 +111,13 @@ Here is a summary of the different models and their performances:
 
 *Note: For entries with a `+` sign in the Epochs column, the first number corresponds to `learn_one_cycle` and the second number corresponds to `lr.fine_tune`. If there are two models, commas `,` separate the training cycles for each model.
 
+## Pre-trained Models Used
+
+- **ResNet50** from [Hugging Face](https://huggingface.co/microsoft/resnet-50)
+- **Ensemble of ResNet50 + EfficientNet** from [Kaggle](https://www.kaggle.com/code/nadhirhasan/tabular-based-pytorch-ann) 
+- **EfficientV2** from [GitHub](https://github.com/snap-research/EfficientFormer)
+  
+
 ## Conclusion
  - The FastAI ImageTab model using ResNet50 and EfficientNetV2, trained on oversampled data, achieved the best performance.
  - Using an ensemble approach that combined the metadata model and the image model did not improve the results compared to using the image model alone.
