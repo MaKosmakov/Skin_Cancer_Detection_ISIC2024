@@ -95,7 +95,7 @@ Here is a summary of the different models and their performances:
 
 | **Oversampling** | **Image Model**              | **Epochs** | **Loss Function** | **Valid Score** | **pAUC** |
 |------------------|-------------------------------|------------|-------------------|-----------------|----------|
-| 100k:10K         | ResNet50 + Efficient_v2       | 0 + 5, 0 + 5  | CrossEntropy with L2 weights       | 0.0025          | 0.140    |
+| 100k:10K         | ResNet50 + Efficient_v2       | 0 + 5, 0 + 5  | CrossEntropy        | 0.0025          | 0.140    |
 | 100k:10K         | ResNet50 + Efficient_v2       | 0 + 1    | CrossEntropy      | 0.0050          | 0.134    |
 | No               | ResNet                        | 0 + 1    | CrossEntropy      | 0.0064          | 0.133    |
 | 10k:1k           | ResNet50                      | 5 + 2    | CrossEntropy      | 0.108           | 0.127    |
