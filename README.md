@@ -37,7 +37,35 @@ Our primary KPI for this project is the Partial Area Under the ROC Curve (pAUC) 
   - Images are in jpeg; vary in size, with a broad range of dimensions,  top 5: 133x133 - ~21k, 131x131 - ~21k, 129x129 - ~20k, 135x135 - ~20k, 137x137 - ~19k.
   - Here are some examples of images which were diagnosed benign and malignant respectively.
 
-## Codes
+## Repository Structure
+
+This repository is organized into the following folders and files, each serving a specific purpose in the development and evaluation of our models:
+
+### Root Directory
+- **`Presentation.pptx`**: Contains our presentation and results.
+
+### EDA Folder
+Contains two notebooks for exploratory data analysis:
+- **`Initial_Analysis.ipynb`**: Provides an initial analysis of the metadata, including the relevance of features using Random Forest and correlation between features.
+
+### Fastai Folder
+Contains notebooks for processing and modeling:
+- **`Oversampling_Only.ipynb`**: Applies synthetic oversampling to the metadata and image augmentations (hue, contrast, rotation) to enhance the dataset.
+- **`No_Oversampling_ResNet50.ipynb`**: Implements a ResNet50 model combining tabular and image data without oversampling. This model has been a top performer with a pAUC score of 0.133.
+- **`10k_to_1k.ipynb`**: Our best-scoring model, which uses an ensemble of ResNet50 and EfficientNetV2 trained on oversampled data (10k melanoma to 1k benign) with the Adam optimizer.
+
+### PyTorch Folder
+- (Include details about this folder once it's populated or if there's specific content you want to describe.)
+
+### Notes
+- The Fastai code was developed using Kaggle's environment. To run these notebooks locally, you need to adjust the file paths and download the dataset from the Kaggle competition.
+
+Feel free to explore each notebook and folder to understand the detailed implementation and results of our project.
+
+
+
+
+
 
 ### EDA:
 - EDA (Random Forest).ipynb
