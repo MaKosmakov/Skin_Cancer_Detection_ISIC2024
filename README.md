@@ -3,7 +3,10 @@ Identify cancers among skin lesions from 3D photographs and metadata (Erdos Inst
 
 ### Team Members
 
-Madelyn Esther Cruz, Maksim Kosmakov, Sarasij Maitra, Jinjin Zhang
+- **Madelyn Esther Cruz**: Lead contributor and primary developer.
+- **Maksim Kosmakov**: Lead contributor and primary developer.
+- **Sarasij Maitra**: Contributing member who helped with model training.
+- **Jinjin Zhang**: Contributing member who helped with EDA.
 
 ### Overview
 The goal of this project is to develop image-based algorithms to identify histologically confirmed skin cancer cases with single-lesion crops from 3D total body photos (TBP).  This project is inspired by the [ISIC2024_Skin_Cancer_Detection Kaggle Competition](https://www.kaggle.com/competitions/isic-2024-challenge). Skin cancer can be fatal if not diagnosed early. Dermoscopy-based AI algorithms should help clinicians in diagnosing melanoma, basal cell, and squamous cell carcinoma by aiding early diagnosis and disease prognosis. Also, determining which individuals should see a clinician in the first place is impactful. We make a combined dataset consisting of both tabular data and image data and train it using tabular modelling and various image recognition architectures.
@@ -59,6 +62,8 @@ Contains notebooks for processing and modeling:
 
 ### Notes
 - The Fastai code was developed using Kaggle's environment. To run these notebooks locally, you need to adjust the file paths and download the dataset from the Kaggle competition.
+- This repository contains only the notebook with the best pAUC score. Other notebooks that were run are not included in this repository.
+- Below, we list some results of the notebooks that were run, showcasing their performance metrics.
 
 Feel free to explore each notebook and folder to understand the detailed implementation and results of our project.
 
@@ -80,10 +85,21 @@ Feel free to explore each notebook and folder to understand the detailed impleme
 ### Testing Codes:
 - ISIC_inference.ipynb
   
-## Models and Best pAUC
-  - ImageTab (CNN with Optimizer) - 0.133
-  - ResNet50 (finetuned https://huggingface.co/microsoft/resnet-50) - 0.126
-  - Ensemble ResNet50 + EffNet (finetuned https://www.kaggle.com/code/nadhirhasan/tabular-based-pytorch-ann) - 0.126
+## Model Comparison
+
+Here is a summary of the different models and their performances:
+
+| **Oversampling** | **Image Model**              | **Epochs** | **Loss Function** | **Valid Score** | **pAUC** |
+|------------------|-------------------------------|------------|-------------------|-----------------|----------|
+| 100k:10K         | ResNet50 + Efficient_v2       | 0 + 1*     | CrossEntropy      | 0.0050          | 0.134    |
+| No               | ResNet                        | 0 + 1*     | CrossEntropy      | 0.0064          | 0.133    |
+| 10k:1k           | ResNet50                      | 5 + 2*     | CrossEntropy      | 0.108           | 0.127    |
+| 100k:10k         | ResNet50                      | 7 + 3*     | pAUC              | 0.962           | 0.018    |
+| 100k:10k         | ResNet50 + Efficient_v2       | 5 + 2*     | CrossEntropy      | 0.088           | 0.090    |
+| No               | PyTorch ResNet50              | 22         | FocalLoss         | 0.0043          | 0.126    |
+| No               | PyTorch ResNet50 + EfficientNet (Ensemble) | 22 + 11* | FocalLoss | -               | 0.126    |
+
+*Note: For entries with a `+` sign in the Epochs column, the first number corresponds to `learn_one_cycle` and the second number corresponds to `lr.fine_tune`.
 
 ## Conclusion
  - The FastAI ImageTab model delivered the best performance. 
