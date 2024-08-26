@@ -59,7 +59,7 @@ Contains two notebooks for exploratory data analysis:
 Contains notebooks for processing and modeling:
 - **`Oversampling_Only.ipynb`**: Applies synthetic oversampling to the metadata and image augmentations (hue, contrast, rotation) to enhance the dataset.
 - **`No_Oversampling_ResNet50.ipynb`**: Implements a ResNet50 model combining tabular and image data without oversampling. This model has been a top performer with a pAUC score of 0.133.
-- **`10k_to_1k.ipynb`**: Our best-scoring model (pAUC=0.140), which uses an ensemble of ResNet50 and EfficientNetV2 trained on oversampled data (10k benigns to 1k melanomas) with the Adam optimizer.
+- **`10k_to_1k.ipynb`**: Our best-scoring model (pAUC=0.140), which uses an ensemble of ResNet50 and EfficientNetV2 trained on oversampled data (10k benigns to 1k melanomas) with the Adam optimizer and L2 weights.
 
 ### PyTorch Folder
 - (Include details about this folder once it's populated or if there's specific content you want to describe.)
