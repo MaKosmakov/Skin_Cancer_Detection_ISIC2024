@@ -102,7 +102,7 @@ Here is a summary of the different models and their performances:
 *Note: For entries with a `+` sign in the Epochs column, the first number corresponds to `learn_one_cycle` and the second number corresponds to `lr.fine_tune`. If there are two models, commas (`,`) separate the training cycles for each model.
 
 ## Conclusion
- - The FastAI ImageTab model delivered the best performance. 
+ - The FastAI ImageTab model using ResNet50 and EfficientNetV2, trained on oversampled data, achieved the best performance.
  - Using an ensemble approach that combined the metadata model and the image model did not improve the results compared to using the image model alone.
  - Challenges: High RAM usage for DataLoader (slow training and requires lots of memory), Possible overfitting
  - Advantages of our work: We explored multiple approaches and leveraged various pretrained models, which saved time and yielded good results.
