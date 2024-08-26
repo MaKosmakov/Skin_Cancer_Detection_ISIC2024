@@ -55,7 +55,7 @@ Contains two notebooks for exploratory data analysis:
 Contains notebooks for processing and modeling:
 - **`Oversampling_Only.ipynb`**: Applies synthetic oversampling to the metadata and image augmentations (hue, contrast, rotation) to enhance the dataset.
 - **`No_Oversampling_ResNet50.ipynb`**: Implements a ResNet50 model combining tabular and image data without oversampling. This model has been a top performer with a pAUC score of 0.133.
-- **`10k_to_1k.ipynb`**: Our best-scoring model, which uses an ensemble of ResNet50 and EfficientNetV2 trained on oversampled data (10k melanoma to 1k benign) with the Adam optimizer.
+- **`10k_to_1k.ipynb`**: Our best-scoring model (pAUC=0.140), which uses an ensemble of ResNet50 and EfficientNetV2 trained on oversampled data (10k benigns to 1k melanomas) with the Adam optimizer.
 
 ### PyTorch Folder
 - (Include details about this folder once it's populated or if there's specific content you want to describe.)
@@ -95,11 +95,11 @@ Here is a summary of the different models and their performances:
 | No               | ResNet                        | 0 + 1*     | CrossEntropy      | 0.0064          | 0.133    |
 | 10k:1k           | ResNet50                      | 5 + 2*     | CrossEntropy      | 0.108           | 0.127    |
 | 100k:10k         | ResNet50                      | 7 + 3*     | pAUC              | 0.962           | 0.018    |
-| 100k:10k         | ResNet50 + Efficient_v2       | 5 + 2*     | CrossEntropy      | 0.088           | 0.090    |
+| 100k:10k         | ResNet50 + Efficient_v2       | 5 + 2*,5+2*     | CrossEntropy      | 0.088           | 0.090    |
 | No               | PyTorch ResNet50              | 22         | FocalLoss         | 0.0043          | 0.126    |
-| No               | PyTorch ResNet50 + EfficientNet (Ensemble) | 22 + 11* | FocalLoss | -               | 0.126    |
+| No               | PyTorch ResNet50 + EfficientNet (Ensemble) | 22, 11 | FocalLoss | -               | 0.126    |
 
-*Note: For entries with a `+` sign in the Epochs column, the first number corresponds to `learn_one_cycle` and the second number corresponds to `lr.fine_tune`.
+*Note: For entries with a `+` sign in the Epochs column, the first number corresponds to `learn_one_cycle` and the second number corresponds to `lr.fine_tune`. If there are two models, commas (`,`) separate the training cycles for each model.
 
 ## Conclusion
  - The FastAI ImageTab model delivered the best performance. 
