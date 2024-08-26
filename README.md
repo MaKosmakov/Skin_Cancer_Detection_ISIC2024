@@ -54,10 +54,8 @@ Contains information about the image and tabular data:
 
   
 ### EDA Folder
-Contains two notebooks for exploratory data analysis:
-- **`EDA_1.ipynb`**
-- **`EDA_2.ipynb`**
-  
+Contains three notebooks for exploratory data analysis: **`EDA_1.ipynb`**, **`EDA_2.ipynb`**, **`EDA_3.ipynb`**
+
 Provides an initial analysis of the metadata, including the relevance of features using Random Forest and correlation between features.
 
 ### Fastai Folder
