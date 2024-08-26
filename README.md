@@ -95,15 +95,16 @@ Here is a summary of the different models and their performances:
 
 | **Oversampling** | **Image Model**              | **Epochs** | **Loss Function** | **Valid Score** | **pAUC** |
 |------------------|-------------------------------|------------|-------------------|-----------------|----------|
-| 100k:10K         | ResNet50 + Efficient_v2       | 0 + 1*     | CrossEntropy      | 0.0050          | 0.134    |
-| No               | ResNet                        | 0 + 1*     | CrossEntropy      | 0.0064          | 0.133    |
-| 10k:1k           | ResNet50                      | 5 + 2*     | CrossEntropy      | 0.108           | 0.127    |
-| 100k:10k         | ResNet50                      | 7 + 3*     | pAUC              | 0.962           | 0.018    |
-| 100k:10k         | ResNet50 + Efficient_v2       | 5 + 2*,5+2*     | CrossEntropy      | 0.088           | 0.090    |
+| 100k:10K         | ResNet50 + Efficient_v2       | 0 + 5, 0 + 5  | CrossEntropy with L2 weights       | 0.0025          | 0.140    |
+| 100k:10K         | ResNet50 + Efficient_v2       | 0 + 1    | CrossEntropy      | 0.0050          | 0.134    |
+| No               | ResNet                        | 0 + 1    | CrossEntropy      | 0.0064          | 0.133    |
+| 10k:1k           | ResNet50                      | 5 + 2    | CrossEntropy      | 0.108           | 0.127    |
+| 100k:10k         | ResNet50                      | 7 + 3    | pAUC              | 0.962           | 0.018    |
+| 100k:10k         | ResNet50 + Efficient_v2       | 5 + 2,5+2     | CrossEntropy      | 0.088           | 0.090    |
 | No               | PyTorch ResNet50              | 22         | FocalLoss         | 0.0043          | 0.126    |
 | No               | PyTorch ResNet50 + EfficientNet (Ensemble) | 22, 11 | FocalLoss | -               | 0.126    |
 
-*Note: For entries with a `+` sign in the Epochs column, the first number corresponds to `learn_one_cycle` and the second number corresponds to `lr.fine_tune`. If there are two models, commas (`,`) separate the training cycles for each model.
+*Note: For entries with a `+` sign in the Epochs column, the first number corresponds to `learn_one_cycle` and the second number corresponds to `lr.fine_tune`. If there are two models, commas `,` separate the training cycles for each model.
 
 ## Conclusion
  - The FastAI ImageTab model using ResNet50 and EfficientNetV2, trained on oversampled data, achieved the best performance.
