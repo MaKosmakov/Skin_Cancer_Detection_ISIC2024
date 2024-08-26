@@ -46,15 +46,18 @@ This repository is organized into the following folders and files, each serving 
 
 ### Root Directory
 - **`Presentation.pptx`**: Contains our presentation and results.
-- 
+
+  
 ### Articles Folder
 Contains information about the image and tabular data:
 - Provides explanations of the columns in the competition’s CSV file and details on the origin of the images used in the competition.
-- 
+
+  
 ### EDA Folder
 Contains two notebooks for exploratory data analysis:
 - **`EDA_1.ipynb`**
 - **`EDA_2.ipynb`**
+  
 Provides an initial analysis of the metadata, including the relevance of features using Random Forest and correlation between features.
 
 ### Fastai Folder
