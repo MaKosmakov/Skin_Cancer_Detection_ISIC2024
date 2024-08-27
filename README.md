@@ -113,7 +113,7 @@ Here is a summary of the different models and their performances:
 
 - **ResNet50** from [Hugging Face](https://huggingface.co/microsoft/resnet-50)
 - **Ensemble of ResNet50 + EfficientNet** from [Kaggle](https://www.kaggle.com/code/nadhirhasan/tabular-based-pytorch-ann) 
-- **EfficientV2** from [GitHub](https://github.com/snap-research/EfficientFormer)
+- **efficientformerv2_s2** from [GitHub](https://github.com/snap-research/EfficientFormer)
   
 
 ## Conclusion
