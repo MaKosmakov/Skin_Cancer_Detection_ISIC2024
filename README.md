@@ -54,7 +54,7 @@ Contains information about the image and tabular data:
 
   
 ### EDA Folder
-Contains three notebooks for exploratory data analysis: **`EDA_1.ipynb`**, **`EDA_2.ipynb`**, **`EDA_3.ipynb`**
+Contains three notebooks for exploratory data analysis: **`EDA_1.ipynb`**, **`EDA_2.ipynb`**, **`EDA_3.ipynb`**,  **`EDA_4.ipynb`**
 
 Provides an initial analysis of the metadata, including the relevance of features using Random Forest and correlation between features.
 
@@ -65,7 +65,11 @@ Contains notebooks for processing and modeling:
 - **`10k_to_1k.ipynb`**: Our best-scoring model (pAUC=0.140), which uses an ensemble of ResNet50 and EfficientNetV2 trained on oversampled data (10k benigns to 1k melanomas) with the Adam optimizer and L2 weights.
 
 ### PyTorch Folder
-- (Include details about this folder once it's populated or if there's specific content you want to describe.)
+Contains notebooks for processing and modeling:
+- **`ISIC_MC_Deep_Learning_Image.ipynb`**: Applies pretrained ResNet50 to image data only
+- **`ISIC_MC_Deep_Learning_MetaData_Images_ResNet_(GoogleNet/Feedforward).ipynb`**: Applies pretrained models to both metadata and images
+- **`ISIC_inference.ipynb`**: Testing notebook for pytorch models
+
 
 ### Notes
 - The Fastai code was developed using Kaggle's environment. To run these notebooks locally, you need to adjust the file paths and download the dataset from the Kaggle competition.
@@ -74,23 +78,6 @@ Contains notebooks for processing and modeling:
 
 Feel free to explore each notebook and folder to understand the detailed implementation and results of our project.
 
-
-
-
-
-
-### EDA:
-- EDA (Random Forest).ipynb
-- EDA_updated.ipynb
-- ISIC.ipynb
-
-### Training Codes:
-- Image+MetaCombined.ipynb
-- ISIC_MC_Deep Learning_Images.ipynb
-- fastai-image-4.ipynb
-
-### Testing Codes:
-- ISIC_inference.ipynb
   
 ## Model Comparison
 
