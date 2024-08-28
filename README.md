@@ -105,7 +105,7 @@ Here is a summary of the different models and their performances:
 
 ## Conclusion
  - The FastAI ImageTab model using ResNet50 and EfficientNetV2, trained on oversampled data, achieved the best performance.
- - Using an ensemble approach that combined the metadata model and the image model did not improve the results compared to using the image model alone.
+ - For the PyTorch approach, using an ensemble that combined the metadata model and the image model did not improve the results compared to using the image model alone.
  - Challenges: High RAM usage for DataLoader (slow training and requires lots of memory), Possible overfitting
  - Advantages of our work: We explored multiple approaches and leveraged various pretrained models, which saved time and yielded good results.
 
