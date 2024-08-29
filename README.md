@@ -46,7 +46,7 @@ This repository is organized into the following folders and files, each serving 
 
 ### Root Directory
 - **`Presentation.pptx`**: Contains our presentation and results.
-
+- **Executive Summary.md**: A concise overview of our project, key achievements, methodology, and future directions.
   
 ### Articles Folder
 Contains information about the image and tabular data:
